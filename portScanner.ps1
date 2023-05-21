@@ -1,6 +1,6 @@
 # Define the target host and port range
-$target_host = "www.example.com"
-$port_range = 1..1025
+$target_host = "127.0.0.1"
+$port_range = 80, 443, 21, 22, 3389, 445, 1433, 3389
 
 # Scan each port in the range
 foreach ($port in $port_range) {
@@ -21,7 +21,7 @@ foreach ($port in $port_range) {
   # Close the client
   $client.Close()
 }
-This program will scan the specified host for open ports in the given range. For each port, it will print a message indicating whether the port is open or closed. This is a very basic port scanner, and can be expanded and modified for more advanced functionality.
+#This program will scan the specified host for open ports in the given range. For each port, it will print a message indicating whether the port is open or closed. This is a very basic port scanner, and can be expanded and modified for more advanced functionality.
 
 
 
